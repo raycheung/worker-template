@@ -1,0 +1,1 @@
+worker: java -XX:+UseG1GC -cp target/uberjar/{{name}}.jar clojure.main -m {{name}}.core
