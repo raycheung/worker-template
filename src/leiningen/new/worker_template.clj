@@ -10,6 +10,7 @@
     (main/info "Generating fresh 'lein new' worker-template project.")
     (->files data
              ["project.clj" (render "project.clj" data)]
+             [".gitignore" (render ".gitignore" data)]
              ["README.md" (render "README.md" data)]
              ["Procfile" (render "Procfile" data)]
              ["Dockerfile" (render "Dockerfile" data)]
