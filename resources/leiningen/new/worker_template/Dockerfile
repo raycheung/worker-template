@@ -1,4 +1,4 @@
-FROM openjdk:8-alpine
+FROM openjdk:11-jdk
 MAINTAINER Ray Cheung <clojure@pragmatic.hk>
 
 ADD target/uberjar/{{name}}.jar /{{name}}/app.jar

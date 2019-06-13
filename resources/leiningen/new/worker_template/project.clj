@@ -3,20 +3,22 @@
                  [cheshire "5.8.1"]
                  [circleci/rollcage "1.0.194"]
                  [com.cognitect/transit-clj "0.8.313"]
-                 [com.microsoft.sqlserver/mssql-jdbc "7.2.2.jre8"]
+                 [com.microsoft.sqlserver/mssql-jdbc "7.2.2.jre11"]
                  [com.novemberain/langohr "5.1.0"]
                  [conman "0.8.3"]
                  [cprop "0.1.13"]
                  [mount "0.1.16"]
                  [nrepl "0.6.0"]
-                 [org.clojure/clojure "1.10.0"]
-                 [org.clojure/core.async "0.4.490"]
+                 [org.clojure/clojure "1.10.1"]
+                 [org.clojure/core.async "0.4.500"]
                  [org.clojure/spec.alpha "0.2.176"]
                  [org.clojure/test.check "0.10.0-alpha3"]
                  [org.clojure/tools.logging "0.4.1"]]
+  ; for compatibility with JDK 11
+  ; https://www.deps.co/blog/how-to-upgrade-clojure-projects-to-use-java-11/#java-util-collection-toarray
+  :managed-dependencies [[org.clojure/core.rrb-vector "0.0.14"]]
 
   :main ^:skip-aot {{name}}.core
-  :jvm-options ["-XX:+UseG1GC"]
   :target-path "target/%s"
 
   :plugins [[lein-kibit "0.1.5"]]
